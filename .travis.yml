@@ -1,0 +1,17 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - chmod +x ./mvnw
+
+install:
+  - ./mvnw clean package
+
+script:
+  - true
+
+deploy:
+  provider: azure_web_apps
+  skip_cleanup: true
